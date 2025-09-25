@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joshua Wilson — Portfolio</title>
+    <meta name="description"
+        content="Joshua Wilson — Computer Science student | Game developer | Software placement seeker">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- THREE.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">JW</div>
+                <div>
+                    <h1>Joshua Wilson</h1>
+                    <div class="meta">Student at UEA Computer Science</div>
+                </div>
+            </div>
+
+            <!-- Hamburger button for mobile -->
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+                <button id="modeToggle" class="btn">🌙 Dark/Light</button>
+                <a class="btn" href="#contact">Hire / Placement</a>
+                <a class="resume" href="./assets/Josh_Wilson_CV.pdf" target="_blank">Download CV</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero fade-up">
+                <div class="hero-top">
+                    <div class="hero-content">
+                        <h1 class="typed-text"></h1>
+                        <p>I am a self-motivated second-year Computer Science student at UEA with a strong interest in
+                            software and games development. Seeking a 12-month placement starting September 2026.</p>
+                    </div>
+                    <div class="hero-right">
+                        <img src="./assets/IMG_4629.JPG" alt="Joshua Wilson" class="profile-pic">
+                    </div>
+                </div>
+                <div id="hero-3d-container">
+                    <div id="hero-3d"></div>
+                </div>
+            </section>
+
+            <div class="lang-divider fade-up">
+                <div class="marquee">
+                    <span><i class="fab fa-python"></i> Python</span> •
+                    <span><i class="fab fa-java"></i> Java</span> •
+                    <span><i class="fab fa-js"></i> JavaScript</span> •
+                    <span><i class="fas fa-database"></i> SQL</span> •
+                    <span><i class="fas fa-c"></i> C++</span>
+
+                    <!-- duplicate for seamless loop -->
+                    <span><i class="fab fa-python"></i> Python</span> •
+                    <span><i class="fab fa-java"></i> Java</span> •
+                    <span><i class="fab fa-js"></i> JavaScript</span> •
+                    <span><i class="fas fa-database"></i> SQL</span> •
+                    <span><i class="fas fa-c"></i> C++</span>
+                </div>
+            </div>
+
+
+            <section id="projects" class="fade-up">
+                <h3>Projects</h3>
+                <div class="projects-grid">
+                    <article class="project card">
+                        <img src="./assets/escapefromlesco.png" alt="Escape From Lesco">
+                        <h4>Escape From Lesco</h4>
+                        <p>Horror/puzzle adventure released on Steam. Managed full development cycle including design,
+                            programming, and marketing.</p>
+                        <div class="tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">3D Art</span>
+                        </div>
+                        <p>Steam Link • GoFundMe • <strong>Users:</strong> 1,200 • <strong>Downloads:</strong> 500+</p>
+                        <p>
+                            <a href="https://store.steampowered.com/app/3094830/Escape_From_Lesco/">Steam Link</a> •
+                            <a
+                                href="https://www.gofundme.com/f/put-my-game-on-steam?attribution_id=sl:2ff52f93-5713-4cc4-adc6-632e0d4a312c&utm_campaign=man_sharesheet_dash&utm_medium=customer&utm_source=copy_link">GoFundMe</a>
+                        </p>
+                    </article>
+
+                    <article class="project card">
+                        <img src="./assets/youtube_channel.png" alt="YouTube Channel">
+                        <h4>YouTube Channel</h4>
+                        <p>Gaming & game development content. Over 20,000 subscribers and 5 million views.</p>
+                        <div class="tags">
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Content Strategy</span>
+                        </div>
+                        <p><strong>Subscribers:</strong> 20k+ • <strong>Views:</strong> 5M+</p>
+                        <p><a href="https://www.youtube.com/@Jwiky">YouTube Link</a></p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" class="fade-up">
+                <h3>Experience</h3>
+                <div class="experience-grid">
+                    <div class="card">
+                        <h4>Retail Sales Associate — Menkind Cambridge</h4>
+                        <small>Sept 2023 – July 2024</small>
+                        <ul>
+                            <li>Delivered excellent customer service and exceeded sales targets.</li>
+                            <li>Analyzed stock trends to assist in promotions and placement decisions.</li>
+                            <li>Developed communication, teamwork, and analytical skills.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="fade-up">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="card">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-bar">
+                            <span>Python</span>
+                            <div class="progress">
+                                <div style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Java</span>
+                            <div class="progress">
+                                <div style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>JavaScript</span>
+                            <div class="progress">
+                                <div style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>SQL</span>
+                            <div class="progress">
+                                <div style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Frameworks & Tools</h4>
+                        <div class="skill-bar">
+                            <span>Node.js</span>
+                            <div class="progress">
+                                <div style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Git/GitHub</span>
+                            <div class="progress">
+                                <div style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Unreal Engine</span>
+                            <div class="progress">
+                                <div style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Blender</span>
+                            <div class="progress">
+                                <div style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="fade-up">
+                <h3>Contact</h3>
+                <form id="contactForm" novalidate>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button class="btn" type="submit">Send Message</button>
+                    <div class="form-msg" aria-live="polite"></div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="fade-up">
+            <p>Made by Joshua Wilson — References available upon request</p>
+            <div class="contact-links">
+                <a href="https://github.com/Jaywiky" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joshua-wilson-606200383/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+    <!-- Your main JS -->
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>
