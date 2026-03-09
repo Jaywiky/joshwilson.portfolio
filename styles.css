@@ -1,43 +1,27 @@
-/* ============================
-   Variables (dark defaults)
-   ============================ */
 :root {
     --maxw: 1100px;
     --radius: 14px;
 
-    /* theme */
     --bg-gradient: linear-gradient(180deg, #071028 0%, #071a2a 60%);
     --bg: #0f1724;
-    /* page background colour (dark) */
     --card-bg: #0b1220;
-    /* card / hero background (dark) */
     --card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
     --text: #e6eef6;
-    /* main text colour */
     --muted: #9aa4b2;
-    /* secondary/muted */
     --accent: #7c5cff;
     --accent-2: #4cc3ff;
     --glass: rgba(255, 255, 255, 0.04);
-    /* subtle borders */
     --btn-text: #051522;
-    /* text colour for gradient buttons */
     --logo-text: #051522;
     --shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
 
-    /* header sizing */
     --header-item-size: 56px;
-    /* unified height for header boxes */
     --header-radius: 12px;
 
     --transition-fast: 180ms;
     --transition-medium: 300ms;
 }
 
-/* ============================
-   Light mode overrides
-   (when .light is set on body)
-   ============================ */
 body.light {
     --bg-gradient: linear-gradient(180deg, #f6f8fc 0%, #e9eef5 60%);
     --bg: #f0f2f5;
@@ -53,9 +37,6 @@ body.light {
     --shadow: 0 8px 28px rgba(16, 24, 40, 0.06);
 }
 
-/* ============================
-   Base & layout
-   ============================ */
 * {
     box-sizing: border-box;
 }
@@ -82,9 +63,7 @@ body {
     padding: 28px;
 }
 
-/* ============================
-   Header
-   ============================ */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -92,14 +71,12 @@ header {
     gap: 20px;
 }
 
-/* brand */
 .brand {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-/* Unified header-box style: logo + toggle + hire/placement buttons */
 .logo,
 .header-cta .btn,
 #modeToggle {
@@ -112,7 +89,6 @@ header {
     flex-shrink: 0;
 }
 
-/* JW logo box */
 .logo {
     width: var(--header-item-size);
     font-weight: 800;
@@ -124,33 +100,26 @@ header {
     letter-spacing: -0.5px;
 }
 
-/* Brand heading text */
 .brand h1 {
     font-size: 18px;
     margin: 0;
     color: var(--text);
 }
 
-/* ---------- Brand text wrapper: center name + meta to match header item size ---------- */
 .brand {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-/* Wrap the name/meta in a text container (this targets the <div> that sits next to .logo) */
 .brand>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* vertically centre the two lines */
     height: var(--header-item-size);
-    /* match header item height */
     min-width: 0;
-    /* allow truncation if needed */
 }
 
-/* Name (single line, bold) */
 .brand h1 {
     font-size: 16px;
     margin: 0;
@@ -158,19 +127,15 @@ header {
     line-height: 1;
     font-weight: 700;
     white-space: nowrap;
-    /* keep the name on one line */
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Subtitle/meta — plain text, but limited to two lines, vertically centered */
 .brand .meta {
     font-size: 12px;
     color: var(--muted);
     line-height: 1.1;
     margin-top: 2px;
-
-    /* Limit to 2 lines so the header never grows too tall */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -178,7 +143,6 @@ header {
     text-overflow: ellipsis;
 }
 
-/* Make resume link the same height as other header boxes */
 .resume {
     display: inline-flex;
     align-items: center;
@@ -193,8 +157,6 @@ header {
 }
 
 
-
-/* nav */
 nav {
     display: flex;
     gap: 10px;
@@ -214,20 +176,16 @@ nav a:hover {
     color: var(--accent);
 }
 
-/* header CTAs container */
 .header-cta {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-/* primary button visual (used for Hire / Placement) */
-/* Buttons keep gradient across themes; text color adapts using --btn-text */
 .btn {
     display: inline-flex;
     gap: 8px;
     padding: 0 14px;
-    /* horizontal padding; vertical alignment controlled by height */
     border-radius: var(--header-radius);
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     color: var(--btn-text);
@@ -242,7 +200,6 @@ nav a:hover {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* dark/light toggle (same sizing as .btn; visual variant)*/
 #modeToggle {
     background: transparent;
     border: 1px solid var(--glass);
@@ -251,7 +208,6 @@ nav a:hover {
     min-width: 64px;
 }
 
-/* subtle hover scaling on header items */
 .logo:hover,
 .header-cta .btn:hover,
 #modeToggle:hover {
@@ -259,7 +215,6 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(2, 6, 23, 0.15);
 }
 
-/* resume link (keeps thinner visual) */
 .resume {
     display: inline-block;
     margin-left: 8px;
@@ -274,9 +229,6 @@ nav a:hover {
     display: inline-flex;
 }
 
-/* ============================
-   Hero
-   ============================ */
 .hero {
     display: flex;
     flex-direction: column;
@@ -317,7 +269,6 @@ nav a:hover {
     color: var(--muted);
 }
 
-/* profile / right area */
 .hero-right {
     display: flex;
     align-items: center;
@@ -332,7 +283,6 @@ nav a:hover {
     flex-shrink: 0;
 }
 
-/* cube container */
 #hero-3d-container {
     width: 300px;
     height: 300px;
@@ -343,9 +293,6 @@ nav a:hover {
     height: 100%;
 }
 
-/* ============================
-   Cards, Projects, Skills
-   ============================ */
 .projects-grid,
 .skills-grid,
 .experience-grid {
@@ -371,7 +318,6 @@ nav a:hover {
     box-shadow: 0 12px 40px rgba(2, 6, 23, 0.12);
 }
 
-/* project images */
 .projects-grid img {
     width: 100%;
     height: 250px;
@@ -379,7 +325,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* tags */
 .tags {
     display: flex;
     gap: 8px;
@@ -395,7 +340,6 @@ nav a:hover {
     color: var(--muted);
 }
 
-/* skill bars */
 .skill-bar {
     margin-bottom: 10px;
 }
@@ -421,9 +365,6 @@ nav a:hover {
     transition: width 900ms ease;
 }
 
-/* ============================
-   Forms
-   ============================ */
 form {
     display: grid;
     gap: 8px;
@@ -449,9 +390,6 @@ form .form-msg {
     color: #f55;
 }
 
-/* ============================
-   Misc
-   ============================ */
 .lang-divider {
     overflow: hidden;
     white-space: nowrap;
@@ -511,7 +449,6 @@ form .form-msg {
     color: var(--accent);
 }
 
-/* footer */
 footer {
     margin: 36px 0 14px;
     color: var(--muted);
@@ -524,10 +461,8 @@ footer {
 }
 
 
-/* ============================ Mobile Header/Nav ============================ */
 @media (max-width: 980px) {
 
-    /* Show hamburger */
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -539,7 +474,7 @@ footer {
         cursor: pointer;
         padding: 0;
         flex-shrink: 0;
-        z-index: 1100; /* above nav */
+        z-index: 1100;
     }
 
     .hamburger span {
@@ -560,18 +495,16 @@ footer {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* Hide desktop nav */
     header nav {
         display: none;
     }
 
-    /* Show mobile nav when toggled */
     nav.show {
         display: flex;
         flex-direction: column;
         gap: 0;
         position: absolute;
-        top: calc(var(--header-item-size) + 16px); /* below header */
+        top: calc(var(--header-item-size) + 16px);
         right: 28px;
         background: var(--card-bg);
         border-radius: 12px;
@@ -594,8 +527,8 @@ footer {
         border-bottom: none;
     }
 
-    /* Optional: hide header CTAs if needed */
     .header-cta {
         display: none;
     }
 }
+
