@@ -1,4 +1,3 @@
-// -------------------- Smooth Scrolling --------------------
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -7,7 +6,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// -------------------- Contact Form Validation --------------------
 document.addEventListener('DOMContentLoaded', () => {
     if (!window.emailjs) {
         console.error("EmailJS SDK not loaded!");
@@ -47,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// -------------------- Typed Text Effect --------------------
 document.addEventListener('DOMContentLoaded', () => {
     const typedText = document.querySelector('.typed-text');
     if (!typedText) return;
@@ -69,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             j--;
         } else if (!deleting && j === phrases[i].length) {
             deleting = true;
-            setTimeout(type, 1200); // pause before deleting
+            setTimeout(type, 1200); 
             return;
         } else if (deleting && j === 0) {
             deleting = false;
@@ -77,13 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         typedText.textContent = current;
-        setTimeout(type, deleting ? 80 : 200); // slower typing speed
+        setTimeout(type, deleting ? 80 : 200); 
     }
 
     type();
 });
 
-// -------------------- Fade-in on Scroll --------------------
+
 const faders = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -96,7 +93,7 @@ const observer = new IntersectionObserver(entries => {
 
 faders.forEach(fader => observer.observe(fader));
 
-// -------------------- Light/Dark Mode Toggle --------------------
+
 const modeBtn = document.getElementById('modeToggle');
 modeBtn?.addEventListener('click', () => {
     document.body.classList.toggle('light');
@@ -105,7 +102,7 @@ modeBtn?.addEventListener('click', () => {
         : "☀️ Light Mode";
 });
 
-// -------------------- THREE.js Spinning Cube --------------------
+
 function initCube() {
     const container = document.getElementById('hero-3d');
     if (!container) return;
@@ -151,11 +148,11 @@ function initCube() {
 
 document.addEventListener('DOMContentLoaded', initCube);
 
-// Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('header nav'); // be specific
+const nav = document.querySelector('header nav'); 
 
 hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('active'); // hamburger animation
+    hamburger.classList.toggle('active'); 
     nav.classList.toggle('show');
 });
+
